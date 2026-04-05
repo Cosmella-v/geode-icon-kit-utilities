@@ -1,7 +1,7 @@
 {
 	"geode": "5.5.3",
 	"gd": {"android": "2.2081", "win": "2.2081", "mac": "2.2081", "ios": "2.2081"},
-	"version": "v1.1.3",
+	"version": "v1.1.4",
 	"id": "nytelyte.icon_kit_utilities",
 	"name": "Icon Kit Utilities",
 	"developer": "NyteLyte",

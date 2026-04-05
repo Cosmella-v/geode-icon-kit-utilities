@@ -14,6 +14,7 @@ Adds new features to the icon kit and fixes some bugs:
 - fixes the bug where the supporter icon dialog box shows up even after unlocking the icon
 - rename "Item 18-20" to "Animation 1-3" in the icon kit special page
 - rename "2.21" icons that are actually given by the Wraith to special chest icons
+- fixes icon info popups for 2.21 icons having no text if you have icon hack
 
 Player Options:  
 ![Example Image: Player Options](nytelyte.icon_kit_utilities/player-options.png)

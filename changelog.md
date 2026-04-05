@@ -1,3 +1,6 @@
+# v1.1.4
+- update mod description to add feature i forgot to mention
+
 # v1.1.3
 - add More Icons support
 
