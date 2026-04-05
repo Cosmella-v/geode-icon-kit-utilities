@@ -8,15 +8,11 @@
 
 #include <constants.hpp>
 
-//#include <hiimjustin000.more_icons/include/MoreIcons.hpp>
-
 #include <hooks/ItemInfoPopup.hpp>
 #include <nytelyte.icon_kit_filter_and_sort/include/api/api.hpp>
 namespace ikfs = nytelyte::icon_kit_filter_and_sort;
 
 using namespace geode::prelude;
-
-//class MoreInfoPopup : public CCObject {};
 
 CCLabelBMFont* HookedItemInfoPopup::addAchievementLabel(const char* label) {
   CCSize winSize = CCDirector::sharedDirector()->getWinSize();
@@ -122,7 +118,7 @@ bool HookedItemInfoPopup::init(int icon, UnlockType unlockType) {
         achievementLabel->setString("Special Chest");
       else
         addAchievementLabel("Special Chest");
-      
+
       if (descriptionArea) {
         descriptionArea->setString(
           unlockType == UnlockType::Cube ?
@@ -140,7 +136,7 @@ bool HookedItemInfoPopup::init(int icon, UnlockType unlockType) {
       if (!randomLabel) addRandomLabel(pickRandomLabel());
     }
   }
-  
+
   if (!Mod::get()->getSettingValue<bool>("disable-item-info-popup-221-icon-fixes")) {
     CCLabelBMFont* achievementLabel = static_cast<CCLabelBMFont*>(
       m_mainLayer->getChildByID("achievement-label")
@@ -164,7 +160,7 @@ bool HookedItemInfoPopup::init(int icon, UnlockType unlockType) {
         case UnlockType::Jetpack: description = "This <cg>Jetpack</c> can be <cl>unlocked</c> in update <cy>2.21</c>."; break;
         default: description = "This should be unreachable. If you see this text, report a bug to Icon Kit Utilities by NyteLyte.";
       }
-      TextArea* descriptionArea = addDescriptionArea(description);
+      descriptionArea = addDescriptionArea(description);
       descriptionArea->setPositionY(descriptionArea->getPositionY() - 5.f);
     }
   }

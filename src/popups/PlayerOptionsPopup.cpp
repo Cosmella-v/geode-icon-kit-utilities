@@ -27,7 +27,7 @@ void PlayerOptionsPopup::addOption(const char* name, int option) {
     maxScale = (m_size.width - 2*HORIZONTAL_BORDER_SIZE - 40 - toggler->getContentSize().width/0.8f) / label->getContentSize().width;
   }
   label->setLayoutOptions(AxisLayoutOptions::create()->setBreakLine(true)->setSameLine(true)->setScaleLimits({}, maxScale));
-  
+
   std::string gameVariableStr = fmt::format("{:04}", option);
   toggler->toggle(GameManager::get()->getGameVariable(gameVariableStr.c_str()));
 
@@ -46,9 +46,9 @@ void PlayerOptionsPopup::addOptionInfo(int tag, const char* description) {
 
 bool PlayerOptionsPopup::init() {
   if (!Popup::init(260.f, 210.f)) return false;
-  
+
   this->setTitle("Player Options");
-  
+
   float titleMargin = m_bgSprite->boundingBox().getMaxY() - m_title->boundingBox().getMaxY() - VERTICAL_BORDER_SIZE;
   float titleHeight = m_title->getScale()*m_title->getContentSize().height;
   float realTitleHeight = 2*titleMargin + titleHeight;
@@ -71,15 +71,15 @@ bool PlayerOptionsPopup::init() {
   m_buttonMenu->updateLayout();
   m_buttonMenu->setLayout(nullptr);
   float topTogglerMax = m_buttonMenu->getChildByIndex<InfoAlertButton*>(0)->boundingBox().getMaxY();
-  
+
   addOptionInfo(60, "Sets player icon in mini mode to default.");
   float topInfoButtonMax = m_buttonMenu->getChildByIndex<InfoAlertButton*>(-1)->boundingBox().getMaxY();
   addOptionInfo(61, "Toggles between main and secondary color for the\nteleport effect in spider mode.");
   addOptionInfo(62, "Toggles between main and secondary color for the\nfire effect from dash orbs.");
   addOptionInfo(96, "Toggles between main and secondary color for the\ntrail in wave mode.");
-  
+
   m_buttonMenu->setPositionY(m_buttonMenu->getPositionY() - (topInfoButtonMax - topTogglerMax)/2);
-   
+
   m_mainLayer->addChild(m_buttonMenu);
   m_mainLayer->addChild(separator);
 
@@ -89,11 +89,7 @@ bool PlayerOptionsPopup::init() {
 }
 
 PlayerOptionsPopup* PlayerOptionsPopup::create() {
-    auto ret = new PlayerOptionsPopup();
-    if (ret && ret->init()) {
-        ret->autorelease();
-        return ret;
-    }
-    delete ret;
-    return nullptr;
+  auto ret = new PlayerOptionsPopup();
+  if (ret && ret->init()) { ret->autorelease(); return ret; }
+  delete ret; return nullptr;
 }

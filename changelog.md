@@ -1,3 +1,6 @@
+# v1.1.3
+- add More Icons support
+
 # v1.1.2
 - fix crashes with arrows for color popups
 - open player 2 color popup when opening col2 glow's popup

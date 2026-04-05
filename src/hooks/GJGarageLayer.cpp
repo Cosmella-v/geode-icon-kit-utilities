@@ -4,7 +4,7 @@
 #include <popups/PlayerOptionsPopup.hpp>
 #include <constants.hpp>
 
-//#include <hiimjustin000.more_icons/include/MoreIcons.hpp>
+#include <hiimjustin000.more_icons/include/MoreIcons.hpp>
 
 using namespace geode::prelude;
 
@@ -54,11 +54,11 @@ void HookedGJGarageLayer::onSelect(CCObject *sender) {
   // hold shift when clicking an icon to always open the icon popup, rather than selecting it, even if the icon is unlocked and unselected
   if (!CCDirector::get()->getKeyboardDispatcher()->getShiftKeyPressed()) return GJGarageLayer::onSelect(sender);
   
-  /*std::string name = MoreIcons::getIconName(item);
-  if (!name.empty()) {
-    if (FLAlertLayer* popup = MoreIcons::createInfoPopup(name, item->m_iconType))
+  IconInfo* iconInfo = more_icons::getNodeInfo(item);
+  if (iconInfo) {
+    if (FLAlertLayer* popup = more_icons::createInfoPopup(iconInfo))
       popup->show();
-  } else*/ {
+  } else {
     showUnlockPopup(itemID, ICON_TO_UNLOCK[static_cast<int>(item->m_iconType)]);
   }
 }

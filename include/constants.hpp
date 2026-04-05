@@ -69,154 +69,108 @@ constexpr const char * ICON_NAMES[] = {
   [0] = "NULL"
 };
 
-constexpr std::pair<const int, const UnlockType> STREAK_UNLOCK_ORDER[] = {
-  {1, UnlockType::Streak},
-  {2, UnlockType::Streak},
-  {3, UnlockType::Streak},
-  {4, UnlockType::Streak},
-  {5, UnlockType::Streak},
-  {6, UnlockType::Streak},
-  {7, UnlockType::Streak},
+constexpr int STREAK_UNLOCK_ORDER[] = {
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
 };
 
-constexpr std::pair<const int, const UnlockType> SHIP_FIRE_UNLOCK_ORDER[] = {
-  {1, UnlockType::ShipFire},
-  {2, UnlockType::ShipFire},
-  {3, UnlockType::ShipFire},
-  {4, UnlockType::ShipFire},
-  {5, UnlockType::ShipFire},
-  {6, UnlockType::ShipFire},
+constexpr int SHIP_FIRE_UNLOCK_ORDER[] = {
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
 };
 
 // there are other items, but these are the ones shown in the icon kit as animations
-constexpr std::pair<const int, const UnlockType> ITEM_UNLOCK_ORDER[] = {
-  {18, UnlockType::GJItem},
-  {19, UnlockType::GJItem},
-  {20, UnlockType::GJItem},
+constexpr int ITEM_UNLOCK_ORDER[] = {
+  18,
+  19,
+  20,
 };
 
-constexpr std::pair<const int, const UnlockType> DEATH_EFFECT_UNLOCK_ORDER[] = {
-  {1, UnlockType::Death},
-  {2, UnlockType::Death},
-  {3, UnlockType::Death},
-  {4, UnlockType::Death},
-  {5, UnlockType::Death},
-  {6, UnlockType::Death},
-  {7, UnlockType::Death},
-  {8, UnlockType::Death},
-  {9, UnlockType::Death},
-  {10, UnlockType::Death},
-  {11, UnlockType::Death},
-  {12, UnlockType::Death},
-  {13, UnlockType::Death},
-  {14, UnlockType::Death},
-  {15, UnlockType::Death},
-  {16, UnlockType::Death},
-  {17, UnlockType::Death},
-  {18, UnlockType::Death},
-  {19, UnlockType::Death},
-  {20, UnlockType::Death},
+constexpr int DEATH_EFFECT_UNLOCK_ORDER[] = {
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
 };
 
-constexpr std::pair<const int, const UnlockType> COLOR_1_UNLOCK_ORDER[] = {
+constexpr int COLOR_UNLOCK_ORDER[] = {
   // the red group
-  {51, UnlockType::Col1}, {19, UnlockType::Col1}, {48, UnlockType::Col1}, {9, UnlockType::Col1},
-  {37, UnlockType::Col1}, {53, UnlockType::Col1}, {54, UnlockType::Col1}, {55, UnlockType::Col1},
-  {25, UnlockType::Col1}, {56, UnlockType::Col1}, {57, UnlockType::Col1}, {58, UnlockType::Col1},
+  51, 19, 48, 9,
+  37, 53, 54, 55,
+  25, 56, 57, 58,
   
   // the orange group
-  {62, UnlockType::Col1}, {63, UnlockType::Col1}, {10, UnlockType::Col1}, {29, UnlockType::Col1},
-  {26, UnlockType::Col1}, {59, UnlockType::Col1}, {60, UnlockType::Col1}, {61, UnlockType::Col1},
-  {30, UnlockType::Col1}, {64, UnlockType::Col1}, {65, UnlockType::Col1}, {66, UnlockType::Col1},
+  62, 63, 10, 29,
+  26, 59, 60, 61,
+  30, 64, 65, 66,
   
   // the yellow group
-  {70, UnlockType::Col1}, {42, UnlockType::Col1}, {11, UnlockType::Col1}, {27, UnlockType::Col1},
-  {71, UnlockType::Col1}, {14, UnlockType::Col1}, {31, UnlockType::Col1}, {45, UnlockType::Col1},
-  {46, UnlockType::Col1}, {67, UnlockType::Col1}, {68, UnlockType::Col1}, {69, UnlockType::Col1},
+  70, 42, 11, 27,
+  71, 14, 31, 45,
+  46, 67, 68, 69,
   
   // the green group
-  {72, UnlockType::Col1}, {73, UnlockType::Col1}, {0, UnlockType::Col1}, {1, UnlockType::Col1},
-  {105, UnlockType::Col1}, {28, UnlockType::Col1}, {32, UnlockType::Col1}, {20, UnlockType::Col1},
-  {2, UnlockType::Col1}, {38, UnlockType::Col1}, {79, UnlockType::Col1}, {80, UnlockType::Col1},
+  72, 73, 0, 1,
+  105, 28, 32, 20,
+  2, 38, 79, 80,
   
   // the light blue group
-  {74, UnlockType::Col1}, {75, UnlockType::Col1}, {44, UnlockType::Col1}, {3, UnlockType::Col1},
-  {40, UnlockType::Col1}, {76, UnlockType::Col1}, {77, UnlockType::Col1}, {78, UnlockType::Col1},
-  {33, UnlockType::Col1}, {21, UnlockType::Col1}, {81, UnlockType::Col1}, {82, UnlockType::Col1},
+  74, 75, 44, 3,
+  40, 76, 77, 78,
+  33, 21, 81, 82,
   
   // the dark blue group
-  {83, UnlockType::Col1}, {16, UnlockType::Col1}, {4, UnlockType::Col1}, {5, UnlockType::Col1},
-  {22, UnlockType::Col1}, {39, UnlockType::Col1}, {84, UnlockType::Col1}, {50, UnlockType::Col1},
-  {34, UnlockType::Col1}, {85, UnlockType::Col1}, {86, UnlockType::Col1}, {87, UnlockType::Col1},
-  {106, UnlockType::Col1}, {88, UnlockType::Col1}, {89, UnlockType::Col1}, {90, UnlockType::Col1},
+  83, 16, 4, 5,
+  22, 39, 84, 50,
+  34, 85, 86, 87,
+  106, 88, 89, 90,
   
   // the purple group
-  {52, UnlockType::Col1}, {41, UnlockType::Col1}, {6, UnlockType::Col1}, {35, UnlockType::Col1},
-  {47, UnlockType::Col1}, {23, UnlockType::Col1}, {92, UnlockType::Col1}, {93, UnlockType::Col1},
-  {49, UnlockType::Col1}, {95, UnlockType::Col1}, {96, UnlockType::Col1}, {97, UnlockType::Col1},
+  52, 41, 6, 35,
+  47, 23, 92, 93,
+  49, 95, 96, 97,
   
   // the magenta group
-  {98, UnlockType::Col1}, {8, UnlockType::Col1}, {36, UnlockType::Col1}, {103, UnlockType::Col1},
-  {7, UnlockType::Col1}, {13, UnlockType::Col1}, {24, UnlockType::Col1}, {104, UnlockType::Col1},
-  {43, UnlockType::Col1}, {99, UnlockType::Col1}, {100, UnlockType::Col1}, {101, UnlockType::Col1},
+  98, 8, 36, 103,
+  7, 13, 24, 104,
+  43, 99, 100, 101,
 
   // the grayscale group
-  {12, UnlockType::Col1}, {91, UnlockType::Col1}, {17, UnlockType::Col1}, {102, UnlockType::Col1}, {18, UnlockType::Col1}, {94, UnlockType::Col1}, {15, UnlockType::Col1},
+  12, 91, 17, 102, 18, 94, 15,
 };
 
-constexpr std::pair<const int, const UnlockType> COLOR_2_UNLOCK_ORDER[] = {
-  // the red group
-  {51, UnlockType::Col2}, {19, UnlockType::Col2}, {48, UnlockType::Col2}, {9, UnlockType::Col2},
-  {37, UnlockType::Col2}, {53, UnlockType::Col2}, {54, UnlockType::Col2}, {55, UnlockType::Col2},
-  {25, UnlockType::Col2}, {56, UnlockType::Col2}, {57, UnlockType::Col2}, {58, UnlockType::Col2},
-  
-  // the orange group
-  {62, UnlockType::Col2}, {63, UnlockType::Col2}, {10, UnlockType::Col2}, {29, UnlockType::Col2},
-  {26, UnlockType::Col2}, {59, UnlockType::Col2}, {60, UnlockType::Col2}, {61, UnlockType::Col2},
-  {30, UnlockType::Col2}, {64, UnlockType::Col2}, {65, UnlockType::Col2}, {66, UnlockType::Col2},
-  
-  // the yellow group
-  {70, UnlockType::Col2}, {42, UnlockType::Col2}, {11, UnlockType::Col2}, {27, UnlockType::Col2},
-  {71, UnlockType::Col2}, {14, UnlockType::Col2}, {31, UnlockType::Col2}, {45, UnlockType::Col2},
-  {46, UnlockType::Col2}, {67, UnlockType::Col2}, {68, UnlockType::Col2}, {69, UnlockType::Col2},
-  
-  // the green group
-  {72, UnlockType::Col2}, {73, UnlockType::Col2}, {0, UnlockType::Col2}, {1, UnlockType::Col2},
-  {105, UnlockType::Col2}, {28, UnlockType::Col2}, {32, UnlockType::Col2}, {20, UnlockType::Col2},
-  {2, UnlockType::Col2}, {38, UnlockType::Col2}, {79, UnlockType::Col2}, {80, UnlockType::Col2},
-  
-  // the light blue group
-  {74, UnlockType::Col2}, {75, UnlockType::Col2}, {44, UnlockType::Col2}, {3, UnlockType::Col2},
-  {40, UnlockType::Col2}, {76, UnlockType::Col2}, {77, UnlockType::Col2}, {78, UnlockType::Col2},
-  {33, UnlockType::Col2}, {21, UnlockType::Col2}, {81, UnlockType::Col2}, {82, UnlockType::Col2},
-  
-  // the dark blue group
-  {83, UnlockType::Col2}, {16, UnlockType::Col2}, {4, UnlockType::Col2}, {5, UnlockType::Col2},
-  {22, UnlockType::Col2}, {39, UnlockType::Col2}, {84, UnlockType::Col2}, {50, UnlockType::Col2},
-  {34, UnlockType::Col2}, {85, UnlockType::Col2}, {86, UnlockType::Col2}, {87, UnlockType::Col2},
-  {106, UnlockType::Col2}, {88, UnlockType::Col2}, {89, UnlockType::Col2}, {90, UnlockType::Col2},
-  
-  // the purple group
-  {52, UnlockType::Col2}, {41, UnlockType::Col2}, {6, UnlockType::Col2}, {35, UnlockType::Col2},
-  {47, UnlockType::Col2}, {23, UnlockType::Col2}, {92, UnlockType::Col2}, {93, UnlockType::Col2},
-  {49, UnlockType::Col2}, {95, UnlockType::Col2}, {96, UnlockType::Col2}, {97, UnlockType::Col2},
-  
-  // the magenta group
-  {98, UnlockType::Col2}, {8, UnlockType::Col2}, {36, UnlockType::Col2}, {103, UnlockType::Col2},
-  {7, UnlockType::Col2}, {13, UnlockType::Col2}, {24, UnlockType::Col2}, {104, UnlockType::Col2},
-  {43, UnlockType::Col2}, {99, UnlockType::Col2}, {100, UnlockType::Col2}, {101, UnlockType::Col2},
-
-  // the grayscale group
-  {12, UnlockType::Col2}, {91, UnlockType::Col2}, {17, UnlockType::Col2}, {102, UnlockType::Col2}, {18, UnlockType::Col2}, {94, UnlockType::Col2}, {15, UnlockType::Col2},
-};
-
-constexpr std::span<const std::pair<const int, const UnlockType>> SPECIAL_UNLOCK_ORDER[] = {
+constexpr std::span<const int> SPECIAL_UNLOCK_ORDER[] = {
   [static_cast<int>(UnlockType::Streak)] = STREAK_UNLOCK_ORDER,
   [static_cast<int>(UnlockType::ShipFire)] = SHIP_FIRE_UNLOCK_ORDER,
   [static_cast<int>(UnlockType::GJItem)] = ITEM_UNLOCK_ORDER,
   [static_cast<int>(UnlockType::Death)] = DEATH_EFFECT_UNLOCK_ORDER,
-  [static_cast<int>(UnlockType::Col1)] = COLOR_1_UNLOCK_ORDER,
-  [static_cast<int>(UnlockType::Col2)] = COLOR_2_UNLOCK_ORDER,
+  [static_cast<int>(UnlockType::Col1)] = COLOR_UNLOCK_ORDER,
+  [static_cast<int>(UnlockType::Col2)] = COLOR_UNLOCK_ORDER,
 };
 
 constexpr std::pair<const int, const UnlockType> SHARDS_OF_POWER_UNLOCK_ORDER[] = {

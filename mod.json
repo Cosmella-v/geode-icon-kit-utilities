@@ -1,7 +1,7 @@
 {
-  "geode": "5.3.0",
+  "geode": "5.5.3",
   "gd": {"android": "2.2081", "win": "2.2081", "mac": "2.2081", "ios": "2.2081"},
-  "version": "v1.1.2",
+  "version": "v1.1.3",
   "id": "nytelyte.icon_kit_utilities",
   "name": "Icon Kit Utilities",
   "developer": "NyteLyte",
@@ -9,7 +9,8 @@
   "dependencies": {
     "geode.node-ids": {"version": ">=v1.22.0", "required": true},
     "geode.devtools": {"version": ">=v1.13.1", "required": false},
-    "nytelyte.icon_kit_filter_and_sort": {"version": ">=1.1.0", "required": false}
+    "nytelyte.icon_kit_filter_and_sort": {"version": ">=1.1.0", "required": false},
+    "hiimjustin000.more_icons": {"version": ">=2.1.3", "required": false}
   },
   "links": {"source": "https://github.com/nytelytee/geode-icon-kit-utilities.git"},
   "resources": {
