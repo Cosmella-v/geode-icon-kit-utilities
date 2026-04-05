@@ -1,60 +1,60 @@
 {
-  "geode": "5.5.3",
-  "gd": {"android": "2.2081", "win": "2.2081", "mac": "2.2081", "ios": "2.2081"},
-  "version": "v1.1.3",
-  "id": "nytelyte.icon_kit_utilities",
-  "name": "Icon Kit Utilities",
-  "developer": "NyteLyte",
-  "description": "Adds extra features to the icon kit.",
-  "dependencies": {
-    "geode.node-ids": {"version": ">=v1.22.0", "required": true},
-    "geode.devtools": {"version": ">=v1.13.1", "required": false},
-    "nytelyte.icon_kit_filter_and_sort": {"version": ">=1.1.0", "required": false},
-    "hiimjustin000.more_icons": {"version": ">=2.1.3", "required": false}
-  },
-  "links": {"source": "https://github.com/nytelytee/geode-icon-kit-utilities.git"},
-  "resources": {
-    "files": ["resources/examples/*.png"]
-  },
-  "settings": {
-    "hide-player-options-button": {"name": "Hide Player Options Button",      "type": "bool", "default": false},
-    "hide-glow-col2-button": {
-      "name": "Hide Glow Col2 Button",
-      "type": "bool",
-      "default": false,
-      "description": "In vanilla, setting the player's glow color to -1 makes it copy the 2nd player color. This is a way to have different colors for glows per player without having to install Separate Dual Icons. This option is hidden, and as far as I know, the only way to get it is to modify your save file. This mod unlocks the option and shows it in the glow section in the character color page. Toggle to hide the button. Thanks to Aktimoose for telling me about this."
-    },
-    "disable-shift-clicking-on-icons": {"name": "Disable Shift Clicking on Icons", "type": "bool", "default": false},
-    "disable-item-info-popup-arrows":  {"name": "Disable Item Info Popup Arrows",  "type": "bool", "default": false},
-    "disable-item-info-popup-animation-name-changes": {
-      "name": "Disable Item Info Popup Animation Name Change",
-      "type": "bool",
-      "default": false,
-      "description": "Normally the animations are called 'Items' and they go from 18 to 21; this mod renames them to 'Animations' and makes them go from 1 to 3. Toggle to disable this."
-    },
-    "disable-item-info-popup-wraith-icon-fixes": {
-      "name": "Disable Item Info Popup Wraith Icon Fixes",
-      "type": "bool",
-      "default": false,
-      "description": "RobTop reserved icons for the Wraith, and then ended up giving unreserved icons as Wraith code rewards; this mod renames them in the Icon Kit. Toggle to disable this."
-    },
-    "disable-item-info-popup-221-icon-fixes": {
-      "name": "Disable Item Info Popup 2.21 Icon Fixes",
-      "type": "bool",
-      "default": false,
-      "description": "If you have a \"2.21\" icon unlocked (either the ones that are actually Wraith icons or if you have icon hack), the text inside of the icon info popup will disappear. This mod fixes that issue. Toggle to disable this."
-    },
-    "unfix-supporter-icon-dialog-box-bug": {
-      "name": "Don't Fix Supporter Icon Dialog Box Bug",
-      "type": "bool",
-      "default": false,
-      "description": "This mod fixes the bug where you are able to open the dialog box for the supporter icon after already unlocking it. Toggle to disable this."
-    },
-    "unfix-meltdown-supporter-icon-dialog-box-bug": {
-      "name": "Don't Fix Meltdown Supporter Icon Dialog Box Bug",
-      "type": "bool",
-      "default": false,
-      "description": "The above bug also happens on the Meltdown Supporter icon when Lite Ad Chests adds the ability to unlock it. Toggle to disable this. Note: The option is separate because Colon intentionally added the bug to mirror vanilla behavior. Since this mod fixes the vanilla behavior, it also fixes the same for Meltdown Supporter, for consistency."
-    }
-  }
+	"geode": "5.5.3",
+	"gd": {"android": "2.2081", "win": "2.2081", "mac": "2.2081", "ios": "2.2081"},
+	"version": "v1.1.3",
+	"id": "nytelyte.icon_kit_utilities",
+	"name": "Icon Kit Utilities",
+	"developer": "NyteLyte",
+	"description": "Adds extra features to the icon kit.",
+	"dependencies": {
+		"geode.node-ids": {"version": ">=v1.22.0", "required": true},
+		"geode.devtools": {"version": ">=v1.13.1", "required": false},
+		"nytelyte.icon_kit_filter_and_sort": {"version": ">=1.1.0", "required": false},
+		"hiimjustin000.more_icons": {"version": ">=2.1.3", "required": false}
+	},
+	"links": {"source": "https://github.com/nytelytee/geode-icon-kit-utilities.git"},
+	"resources": {
+		"files": ["resources/examples/*.png"]
+	},
+	"settings": {
+		"hide-player-options-button": {"name": "Hide Player Options Button",      "type": "bool", "default": false},
+		"hide-glow-col2-button": {
+			"name": "Hide Glow Col2 Button",
+			"type": "bool",
+			"default": false,
+			"description": "In vanilla, setting the player's glow color to -1 makes it copy the 2nd player color. This is a way to have different colors for glows per player without having to install Separate Dual Icons. This option is hidden, and as far as I know, the only way to get it is to modify your save file. This mod unlocks the option and shows it in the glow section in the character color page. Toggle to hide the button. Thanks to Aktimoose for telling me about this."
+		},
+		"disable-shift-clicking-on-icons": {"name": "Disable Shift Clicking on Icons", "type": "bool", "default": false},
+		"disable-item-info-popup-arrows":  {"name": "Disable Item Info Popup Arrows",  "type": "bool", "default": false},
+		"disable-item-info-popup-animation-name-changes": {
+			"name": "Disable Item Info Popup Animation Name Change",
+			"type": "bool",
+			"default": false,
+			"description": "Normally the animations are called 'Items' and they go from 18 to 21; this mod renames them to 'Animations' and makes them go from 1 to 3. Toggle to disable this."
+		},
+		"disable-item-info-popup-wraith-icon-fixes": {
+			"name": "Disable Item Info Popup Wraith Icon Fixes",
+			"type": "bool",
+			"default": false,
+			"description": "RobTop reserved icons for the Wraith, and then ended up giving unreserved icons as Wraith code rewards; this mod renames them in the Icon Kit. Toggle to disable this."
+		},
+		"disable-item-info-popup-221-icon-fixes": {
+			"name": "Disable Item Info Popup 2.21 Icon Fixes",
+			"type": "bool",
+			"default": false,
+			"description": "If you have a \"2.21\" icon unlocked (either the ones that are actually Wraith icons or if you have icon hack), the text inside of the icon info popup will disappear. This mod fixes that issue. Toggle to disable this."
+		},
+		"unfix-supporter-icon-dialog-box-bug": {
+			"name": "Don't Fix Supporter Icon Dialog Box Bug",
+			"type": "bool",
+			"default": false,
+			"description": "This mod fixes the bug where you are able to open the dialog box for the supporter icon after already unlocking it. Toggle to disable this."
+		},
+		"unfix-meltdown-supporter-icon-dialog-box-bug": {
+			"name": "Don't Fix Meltdown Supporter Icon Dialog Box Bug",
+			"type": "bool",
+			"default": false,
+			"description": "The above bug also happens on the Meltdown Supporter icon when Lite Ad Chests adds the ability to unlock it. Toggle to disable this. Note: The option is separate because Colon intentionally added the bug to mirror vanilla behavior. Since this mod fixes the vanilla behavior, it also fixes the same for Meltdown Supporter, for consistency."
+		}
+	}
 }

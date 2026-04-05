@@ -5,15 +5,15 @@
 class PlayerOptionsPopup : public geode::Popup {
 protected:
 
-  cocos2d::CCMenu *m_buttonMenu;
-  
-  void toggleOption(cocos2d::CCObject *sender);
+	cocos2d::CCMenu *m_buttonMenu;
 
-  void addOption(const char*, int);
-  void addOptionInfo(int, const char*);
-  bool init();
+	void toggleOption(cocos2d::CCObject *sender);
+
+	void addOption(const char*, int);
+	void addOptionInfo(int, const char*);
+	bool init();
 
 public:
-  static PlayerOptionsPopup* create();
+	static PlayerOptionsPopup* create();
 };
 

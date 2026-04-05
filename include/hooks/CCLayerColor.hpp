@@ -4,6 +4,6 @@
 #include <Geode/modify/CCLayerColor.hpp>
 
 struct HookedCCLayerColor : geode::Modify<HookedCCLayerColor, cocos2d::CCLayerColor> {
-  $override
-  bool initWithColor(cocos2d::ccColor4B const& color, GLfloat width, GLfloat height) override;
+	$override
+	bool initWithColor(cocos2d::ccColor4B const& color, GLfloat width, GLfloat height) override;
 };
