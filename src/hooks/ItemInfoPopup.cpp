@@ -98,7 +98,7 @@ bool HookedItemInfoPopup::init(int icon, UnlockType unlockType) {
 
 	if (!Mod::get()->getSettingValue<bool>("disable-item-info-popup-wraith-icon-fixes")) {
 		if (
-			((icon == 321 || icon == 351) && unlockType == UnlockType::Cube) ||
+			((icon == 321 || icon == 351 || icon == 370) && unlockType == UnlockType::Cube) ||
 			((icon == 71  || icon ==  57) && unlockType == UnlockType::Bird)
 		) {
 

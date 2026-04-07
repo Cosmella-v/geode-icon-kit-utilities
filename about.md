@@ -19,5 +19,5 @@ Adds new features to the icon kit and fixes some bugs:
 Player Options:  
 ![Example Image: Player Options](nytelyte.icon_kit_utilities/player-options.png)
 
-Arrows in Item Info Popups:  
-![Example Image: Arrows in Item Info Popups](nytelyte.icon_kit_utilities/arrows-in-item-info-popups.png)
+Arrows in Icon Info Popups:  
+![Example Image: Arrows in Icon Info Popups](nytelyte.icon_kit_utilities/arrows-in-icon-info-popups.png)

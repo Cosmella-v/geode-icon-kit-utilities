@@ -1,3 +1,7 @@
+# v1.1.5
+- add cube 370 to wraith icon info popup fix
+- reword mod description slightly
+
 # v1.1.4
 - update mod description to add feature i forgot to mention
 
