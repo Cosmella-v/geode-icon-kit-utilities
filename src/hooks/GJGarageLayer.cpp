@@ -27,6 +27,9 @@ void HookedGJGarageLayer::showUnlockPopup(int itemID, UnlockType unlockType) {
 	bool fixMeltdownSupporterIconDialogBoxBug = !Mod::get()->getSettingValue<bool>("unfix-meltdown-supporter-icon-dialog-box-bug");
 	if (unlockType != UnlockType::Cube)
 		return GJGarageLayer::showUnlockPopup(itemID, unlockType);
+
+	// allow getting supporter icon if you don't have it... i can't believe you forgot about this lol
+	if (itemID == 13 && unlockType == UnlockType::Cube && !GameManager::get()->isIconUnlocked(itemID, IconType::Cube)) return GJGarageLayer::showUnlockPopup(itemID, unlockType);
 	if ((fixSupporterIconDialogBoxBug && itemID == 13) || (fixMeltdownSupporterIconDialogBoxBug && itemID == 71))
 		ItemInfoPopup::create(itemID, UnlockType::Cube)->show();
 	else
